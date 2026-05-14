@@ -6,8 +6,9 @@ from typing import List, Dict
 
 
 def cinema_visit(customers: List[Dict[str, str]],
-                 hall_number: int, cleaner_name: str,
-                 movie_name: str) -> None:
+                 hall_number: int,
+                 cleaner_name: str,
+                 movie: str) -> None:
     cinema_hall = CinemaHall(number=hall_number)
     cleaner_staff = Cleaner(name=cleaner_name)
     cinema_bar = CinemaBar()
@@ -22,6 +23,6 @@ def cinema_visit(customers: List[Dict[str, str]],
         )
         guests.append(customer_inst)
     cinema_hall.movie_session(
-        movie_name=movie_name,
+        movie=movie,
         customers=guests,
         cleaning_staff=cleaner_staff)
